@@ -1,40 +1,83 @@
 <!DOCTYPE html>
 <html>
-  <style>
-    p {
-      color: blue;
-      font-style: italic;
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-      font-weight: bolder;
+<title>dropdown</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+<style>
+    body {
+        margin: 0.5rem;
+        background-color: azure;
     }
-  </style>
-<body>
+    p {
+        font-weight: bolder;
+        color: blue;
+    }
+    header {
+        color: blue;
+        text-align: inherit;
+        line-height: 3rem;
+        font-weight: bolder;
+    }
+</style>
+  <body>
+      
+  <header>List of Possible Combinations</header>
 
-<p>Select a new car from the list.</p>
+  
 
 <select id="mySelect" onchange="myFunction()">
-  <option value="Audi"></option>
-  <option value="Acura">Acura</option>
-  <option value="Audi">Audi</option>
-  <option value="BMW">BMW</option>
-  <option value="Ford">Ford</option>
-  <option value="Mercedes">Mercedes</option>
-  <option value="Toyota">Toyota</option>
-  <option value="Volvo">Volvo</option>
+
+<option value=" "></option>
+  <option value="Car">Car</option>
+  <option value="Amusement">Amusement</option>
+  <option value="Train">Train</option>
+  <option value="Air">Air</option>
+  <option value="Sea">Sea</option>
+  <option value="Water">Water</option>
+  <option value="Sub">Sub</option>
+  <option value="Trade">Trade</option>
+  <option value="Market">Market</option>
+  <option value="Police">Police</option>
+  <option value="Football">Football</option>
+  <option value="Basketball">Basketball</option>
   
-  
+
+
+
+</select><select id="mySelect1" onchange="myFunction1()">
+  <option value=" "></option>
+  <option value="Park">Park</option>
+  <option value="Square">Square</option>
+  <option value="Place">Place</option>
+  <option value="Shore">Shore</option>
+  <option value="Station">Station</option>
+  <option value="Field">Field</option>
+  <option value="Way">Way</option>
+  <option value="Fall">Fall</option>
+  <option value="Port">Port</option>
+  <option value="Court">Court</option>
+   <option value="Fare">Fare</option>
+   
+
 </select>
 
-<p>When you select a new car, a function is triggered which outputs the value of the selected car.</p>
+<p id="demo"> Click The Words to give meaning </p>
 
-<p id="demo"></p>
 
 <script>
 function myFunction() {
   var x = document.getElementById("mySelect").value;
-  document.getElementById("demo").innerHTML = "You selected: " + x;
+  var y = document.getElementById("mySelect1").value;
+  document.getElementById("demo").innerHTML =  "Word is " + x  +y;
+
+}
+function myFunction1() {
+  var x = document.getElementById("mySelect").value;
+  var y = document.getElementById("mySelect1").value;
+  document.getElementById("demo").innerHTML =  "Word is " + x  +y;
+
 }
 </script>
-
 </body>
 </html>
